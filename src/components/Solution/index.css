@@ -1,0 +1,17 @@
+.solution {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.solution__banner {
+    overflow: hidden;
+    width: 40%;
+}
+.solution__banner img {
+    width: 100%;
+    margin: 80px;
+}
+/* .left-banner {
+    background-image: url("../images/banner.png");
+} */

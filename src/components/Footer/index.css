@@ -1,0 +1,39 @@
+.footer {
+    padding: 120px 320px;
+    display: flex;
+    border-top: 1px solid rgba(0, 0, 0, .08);
+}
+.left {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 50%;
+    font-family: 'Andika', sans-serif;
+    justify-content: center;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    font-family: 'Andika', sans-serif;
+    gap: 18px;
+    letter-spacing: 3px;
+}
+.right {
+    width: 50%;
+    display: flex;
+}
+.right ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    gap: 12px;
+    font-family: 'Andika', sans-serif;
+    width: fit-content;
+}
+.right ul .active {
+    border-bottom:  1px solid #659DBD;
+}
+.right ul li a {
+    text-decoration: none;
+    color: #222222;
+}

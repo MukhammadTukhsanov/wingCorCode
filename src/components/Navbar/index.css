@@ -1,0 +1,36 @@
+.section {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, .08);
+    padding: 24px;
+}
+.brand {
+    display: flex;
+    align-items: center;
+    font-family: 'Andika', sans-serif;
+    gap: 18px;
+    letter-spacing: 3px;
+}
+.menu{
+    margin-left: auto;
+}
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    font-family: 'Andika', sans-serif;
+    letter-spacing: 1px;
+    margin-left: auto;
+}
+.menu ul li {
+    display: flex;
+    align-items: center;
+}
+.menu ul .active {
+    border-bottom: 1px solid #659DBD;
+    padding: 0 10px;
+}
+.menu ul li a {
+    color: #222222;
+    text-decoration: none;
+}

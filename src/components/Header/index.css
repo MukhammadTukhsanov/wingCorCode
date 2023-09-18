@@ -1,0 +1,22 @@
+.framer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.header{
+    padding-top: 80px;
+    padding-left: 226px;
+    padding-right: 226px;
+    display: flex;
+    justify-content: center;
+}
+.header h1 {
+    font-family: 'Andika', sans-serif;
+    font-weight: 700;
+    letter-spacing: .14rem;
+    font-size: 56px;
+    max-width: 768px;
+}
+.framer img {
+    margin-top: 60px;
+}

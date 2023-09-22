@@ -1,0 +1,14 @@
+.team {
+    display: flex;
+    flex-direction: column;
+    padding: 40px 120px;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+.cardsBox {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    gap: 36px;
+}

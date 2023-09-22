@@ -1,7 +1,8 @@
 import React from "react";
+import { Envelope, Github, Linkedin, Twitter } from "react-bootstrap-icons";
 
 const Cards = (props) => {
-    const {type, imgName, title, text} = props
+    const {type, imgName, title, text, twitLink, linkedLink, gitLink, mailLink, avatar} = props
     return(
         type === "cardWithImage"?
         <div style={{...style.initial, ...style.cardWithImage}}>
@@ -17,8 +18,32 @@ const Cards = (props) => {
         <div>
 
         </div>:
+        type === "cardTeam"?
+        <div style={{...style.cardTeam}}>
+            <div style={{width: "100%", display: "flex", justifyContent: "center", backgroundImage: ""}}>
+                <div style={{width: 130, height: 130, backgroundColor: "#fff", borderRadius: "50%", backgroundImage: `url(${avatar})`}}></div>
+            </div>
+            <div style={{margin: 32, gap: 16, display: "flex", flexDirection: "column", textAlign: "center"}}>
+                <h4 style={{...style.name, letterSpacing: 1.2}}>Neeraj Singh</h4>
+                <p style={{...style.subtitle, textTransform: "uppercase", fontSize: 10, fontWeight: "bold"}}>{text}</p>
+            </div>
+            <div style={{display: "flex", justifyContent: "center", gap: 16}}>
+                <a style={{color: "#222"}} href={twitLink}>
+                    <Twitter />
+                </a>
+                <a style={{color: "#222"}} href={linkedLink}>
+                    <Linkedin />
+                </a>
+                <a style={{color: "#222"}} href={gitLink}>
+                    <Github />
+                </a>
+                <a style={{color: "#222"}} href={mailLink}>
+                    <Envelope />
+                </a>
+            </div>
+        </div>:
         <div style={{...style.card, ...style.initial}}>
-            <div style={{margin: 32, gap: 16, display: "flex", flexDirection: "column"}}>
+            <div style={{margin: 32, gap: 16, display: "flex", flexDirection: "column", justifyContent: "center"}}>
                 <h4 style={{...style.name}}>Name N</h4>
                 <p style={{...style.subtitle}}>Never thought I'd say this, but I don't even think about copy-pasting to ChatGPT anymore. It's all WING now!</p>
             </div>
@@ -33,6 +58,17 @@ const style={
         backgroundColor: 'rgb(246, 245, 244)',
         borderRadius: 16,
         overflow: 'hidden',
+    },
+    cardTeam: {
+        display: 'flex',
+        justifyContent: 'center',
+        flexDirection: 'column',
+        backgroundColor: 'rgba(101, 157, 189, .2)',
+        borderRadius: 16,
+        padding: 40,
+        overflow: 'hidden',
+        width: 'max-content',
+        maxWidth: 420
     },
     cardWithImage: {
         maxWidth: 523,

@@ -8,11 +8,11 @@ import Solution from "../Solution";
 const About = () =>{
     return(
         <>
-            <Navbar />
+            <Navbar active={"About"} />
             <Header />
             <Features/>
             <Solution />
-            <Footer />
+            <Footer active={"About"} />
         </>
     )
 }

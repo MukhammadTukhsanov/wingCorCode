@@ -1,10 +1,33 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import logo from "../../icons/logo2.png"
 
 import "./index.css"
 
-const Footer = () => {
+const Footer = ({active}) => {
+    const [activePage, setActivePage] = useState()
+    const menuList = [
+        {
+            text: "About",
+            link: "/"
+        },
+        {
+            text: "Team",
+            link: "/team"
+        },
+        {
+            text: "Operation Modes",
+            link: "#"
+        },
+        {
+            text: "FAQ",
+            link: "#"
+        },
+    ]
+    useEffect(() => {
+        setActivePage(active)
+    })
     return(
         <div className={"footer"}>            
             <div className="left">
@@ -17,18 +40,11 @@ const Footer = () => {
             </div>
             <div className="right">
                 <ul>
-                    <li className="active">
-                        <a href="#">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Pricing</a>
-                    </li>
-                    <li>
-                        <a href="#">Operation Modes</a>
-                    </li>
-                    <li>
-                        <a href="#">FAQ</a>
-                    </li>
+                    {menuList.map(e => (
+                        <li className={e.text === activePage ? "active" : ""}>
+                            <Link to={e.link}>{e.text}</Link>
+                        </li>
+                    ))}
                 </ul>
             </div>
         </div>
